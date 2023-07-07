@@ -4,10 +4,6 @@ const Demo = () => {
   return (
     <>
     This is a demo.
-
-    This is a demo.
-
-    This is a demo.
     </>
   )
 }
