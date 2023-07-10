@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import "./Style.css";
 
 const Demo = () => {
   return (
     <>
-    Hello! World
-    </>
-  )
-}
+      <div className="coffeecontainer-test-content">
+        <div className="coffeecontainer-test">
+          <div className="cofeecontainer-content">
+            <h1>Coffee history</h1>
 
-export default Demo
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Demo;
