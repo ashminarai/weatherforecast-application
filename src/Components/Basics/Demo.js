@@ -8,8 +8,7 @@ const Demo = () => {
         <div className="coffeecontainer-test">
           <div className="cofeecontainer-content">
             <h1>Coffee history</h1>
-
-            <p></p>
+            <p>Hi</p>
           </div>
         </div>
       </div>
