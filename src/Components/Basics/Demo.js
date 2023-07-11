@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 
 const Demo = () => {
-  const [city, setCity] = useState("");
-  const [search, setSearch] = useState("");
+  const [city, setCity] = useState(null);
+  const [search, setSearch] = useState("Mumbai");
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `http://api.openweatherapp.org/data/2.5/weather?q= ${search}&appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
       const response = await fetch(url);
       const resJson = await response.json();
-      setCity(resJson);
+      setCity(resJson.main);
     };
     fetchApi();
-  }, [search]);
+  }, [search])
   return (
     <>
       <div className="box">
@@ -22,7 +22,7 @@ const Demo = () => {
             type="search"
             className="inputFeild"
             onChange={(event) => {
-              setSearch(event.target.value)
+              setSearch(event.target.value);
             }}
           ></input>
         </div>
@@ -40,15 +40,15 @@ const Demo = () => {
               </h2>
               <h1 className="temp">
                 {/* city, main, temperature savaiko data linu yo lekheko */}
-                {city.main.temp}
+                {city.temp}°Cel
               </h1>
-              <h3 className="tempmin_max">Min: 5.25° Cel | Max: 5.25° Cel</h3>
+              <h3 className="tempmin_max">Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel</h3>
             </div>
           </div>
         )}
-         <div className="wave -one"></div>
-            <div className="wave -two"></div>
-            <div className="wave -three"></div>
+        <div className="wave -one"></div>
+        <div className="wave -two"></div>
+        <div className="wave -three"></div>
       </div>
     </>
   );
