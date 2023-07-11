@@ -4,14 +4,14 @@ import "./Style.css";
 const Demo = () => {
   return (
     <>
-      <div className="coffeecontainer-test-content">
-        <div className="coffeecontainer-test">
-          <div className="cofeecontainer-content">
-            <h1>Coffee history</h1>
-            <p>Hi</p>
-          </div>
+    <div className="weather-container-content">
+      <div className="weather-container">
+        <div className="weather-content">
+
         </div>
       </div>
+
+    </div>
     </>
   );
 };
