@@ -13,15 +13,15 @@ const Demo = () => {
       setCity(resJson);
     };
     fetchApi();
-  })
+  }, [setSearch])
   return (
     <>
       <div className="box">
         <div className="inputData">
           <input
             type="search"
-            className="inputField"
-            onChange={(event) => {}}
+            className="inputFeild"
+            onChange={(event) => {setSearch(event.target.value)}}
           ></input>
         </div>
       
@@ -29,7 +29,8 @@ const Demo = () => {
       <div className="info">
         <h2 className="location">
           <i className="fas fa-street-view"></i>
-          {city.name}
+          {search}
+          {/* {city.name} */}
         </h2>
         <h1 className="temp"></h1>
         <h3 className="tempmin_max">Min: 5.25° Cel | Max: 5.25° Cel</h3>
