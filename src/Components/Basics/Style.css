@@ -1,3 +1,5 @@
+/* http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=b14425a6554d189a2d7dc18a8e7d7263
+api.openweatheraapp.org/data/2.5/weather?q={city,name}&appid=b14425a6554d189a2d7dc18a8e7d7263 */
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap');
 *{
