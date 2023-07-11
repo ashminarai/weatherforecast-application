@@ -4,11 +4,9 @@ import "./Style.css";
 const Demo = () => {
   return (
     <>
-    <div className="weather-container-content">
-      <div className="weather-container">
-        <div className="weather-content">
-
-        </div>
+    <div className="box">
+      <div className="inputData">
+        <input type="search"></input>
       </div>
 
     </div>
