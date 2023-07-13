@@ -7,7 +7,7 @@ const Demo = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`
       const response = await fetch(url);
       const resJson = await response.json();
       setCity(resJson.main);
@@ -22,7 +22,7 @@ const Demo = () => {
             type="search"
             className="inputFeild"
             onChange={(event) => {
-              setSearch(event.target.value);
+              setSearch(event.target.value)
             }}
           ></input>
         </div>
@@ -43,12 +43,14 @@ const Demo = () => {
                 {city.temp}°Cel
               </h1>
               <h3 className="tempmin_max">Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel</h3>
-            </div>
+           
           </div>
-        )}
+        
         <div className="wave -one"></div>
         <div className="wave -two"></div>
         <div className="wave -three"></div>
+      </div>
+      )}
       </div>
     </>
   );
