@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 
 const Demo = () => {
+  // usestate ma here city is initial value and setCity is updated value
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Mumbai");
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
-      const response = await fetch(url);
-      const resJson = await response.json();
-      setCity(resJson.main);
+      // const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      // const response = await fetch(url);
+      // const resJson = await response.json();
+      // setCity(resJson.main);
     };
     fetchApi();
   }, [search]);
@@ -21,9 +22,9 @@ const Demo = () => {
           <input
             type="search"
             className="inputFeild"
-            // onChange={(event) => {
-            //   setSearch(event.target.value);
-            // }}
+            onChange={(event) => {
+              setSearch(event.target.value);
+            }}
           ></input>
         </div>
 
@@ -47,11 +48,15 @@ const Demo = () => {
               </h3>
             </div>
 
-             <div className="wave -one"></div> 
+            <div className="wave -one"></div> 
             <div className="wave -two"></div>
             <div className="wave -three"></div>
           </div>
          )}  */}
+          <div className="wave -one"></div> 
+            <div className="wave -two"></div>
+            <div className="wave -three"></div>
+            <div className="wave -four"></div>
       </div>
     </>
   );
