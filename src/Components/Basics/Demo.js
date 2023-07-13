@@ -1,20 +1,19 @@
-// import React, { useEffect, useState } from "react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Style.css";
 
 const Demo = () => {
-  // const [city, setCity] = useState(null);
-  // const [search, setSearch] = useState("Mumbai");
+  const [city, setCity] = useState(null);
+  const [search, setSearch] = useState("Mumbai");
 
-  // useEffect(() => {
-  //   const fetchApi = async () => {
-  //     const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
-  //     const response = await fetch(url);
-  //     const resJson = await response.json();
-  //     setCity(resJson.main);
-  //   };
-  //   fetchApi();
-  // }, [search]);
+  useEffect(() => {
+    const fetchApi = async () => {
+      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      const response = await fetch(url);
+      const resJson = await response.json();
+      setCity(resJson.main);
+    };
+    fetchApi();
+  }, [search]);
   return (
     <>
       <div className="box">
@@ -32,19 +31,19 @@ const Demo = () => {
 
         {/* {!city ? (
           <p>No Data Found</p>
-        ) : ( */}
+        ) : ( 
           <div>
             <div className="info">
               <h2 className="location">
                 <i className="fas fa-street-view"></i>
-                {/* {search} */}
+                {search}
               </h2>
               <h1 className="temp">
-                {/* city, main, temperature savaiko data linu yo lekheko */}
-                {/* {city.temp}°Cel */}
+               
+                {city.temp}°Cel
               </h1>
               <h3 className="tempmin_max">
-                {/* Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel */}
+                Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel
               </h3>
             </div>
 
@@ -52,7 +51,7 @@ const Demo = () => {
             <div className="wave -two"></div>
             <div className="wave -three"></div>
           </div>
-        {/* )} */}
+         )}  */}
       </div>
     </>
   );
