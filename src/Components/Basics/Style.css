@@ -98,3 +98,13 @@ html{
         transform:scale(1.5);
     }
 }
+.inputFeild{
+    margin-top:30px;
+    height:50px;
+    width:300px;
+    margin-left:60px;
+    border-radius: 40px;
+    /* border:none;
+    outline:none; */
+    padding-left:30px;
+}
