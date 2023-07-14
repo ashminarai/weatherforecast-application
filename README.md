@@ -20,7 +20,7 @@ https://openweathermap.org/
 
 **If, the location is not found, it displays an error messages as shown below:**
 
-<img width="1440" alt="error" src="https://github.com/ashminarai/weatherforecast-application/assets/85731866/0d7427c1-c55e-4fa8-992b-d10db7fbedbf">
+<img width="1440" alt="error" src="https://github.com/ashminarai/weatherforecast-application/assets/85731866/e1707580-19bc-486b-93bf-f81d95479a26">
 
 
 
