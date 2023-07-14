@@ -4,11 +4,12 @@ import "./Style.css";
 const Demo = () => {
   // usestate ma here city is initial value and setCity is updated value
   const [city, setCity] = useState(null);
-  const [search, setSearch] = useState("Mumbai");
+  const [search, setSearch] = useState("Dharan");
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b24c8c43ed28e5c42d4dd1e05e03db39`
+      // note: The api after appid may differ according to your gmail and verification
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b24c8c43ed28e5c42d4dd1e05e03db39`;
       const response = await fetch(url);
       const resJson = await response.json();
       setCity(resJson.main);
@@ -22,6 +23,7 @@ const Demo = () => {
           <input
             type="search"
             className="inputFeild"
+            value={search}
             onChange={(event) => {
               setSearch(event.target.value);
             }}
@@ -30,7 +32,21 @@ const Demo = () => {
 
         {/* using terminatory operator */}
 
-         {!city ? (
+        {!city ? (
+          <p className="nodata">No data found</p>
+        ) : (
+          <>
+            <div className="info">
+              <h2 className="location"><i className="fas fa-street-view"></i>        {search}</h2>
+              <h1 className="temp">{city.temp} °Cel</h1>
+              <h3 className="tempmin_max">
+                Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel
+              </h3>
+            </div>
+          </>
+        )}
+
+        {/* {!city ? (
           <p className="nodata">No Data Found</p>
         ) : ( 
           <div>
@@ -40,30 +56,21 @@ const Demo = () => {
                 {search}
               </h2>
               <h1 className="temp">
-               
-                {city.temp}°Cel
+                {city.main.temp}°Cel
               </h1>
               <h3 className="tempmin_max">
                 Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel
               </h3>
             </div>
+
           </div>
-         )}  
-          <div className="wave -one"></div> 
-            <div className="wave -two"></div>
-            <div className="wave -three"></div>
-            
+         )}   */}
+        <div className="wave -one"></div>
+        <div className="wave -two"></div>
+        <div className="wave -three"></div>
       </div>
     </>
   );
 };
 
 export default Demo;
-
-
-
-
-
-
-
-
