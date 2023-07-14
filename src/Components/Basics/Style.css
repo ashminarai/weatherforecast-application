@@ -108,3 +108,9 @@ html{
     outline:none; */
     padding-left:30px;
 }
+.nodata{
+    margin-top:20px;
+    margin-left:150px;
+    color:red;
+    font-weight:900;
+}

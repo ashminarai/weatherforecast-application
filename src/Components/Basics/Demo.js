@@ -32,7 +32,7 @@ const Demo = () => {
         {/* using terminatory operator */}
 
          {!city ? (
-          <p>No Data Found</p>
+          <p className="nodata">No Data Found</p>
         ) : ( 
           <div>
             <div className="info">
@@ -64,6 +64,10 @@ const Demo = () => {
 };
 
 export default Demo;
+
+
+
+
 
 
 
