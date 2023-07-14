@@ -14,7 +14,7 @@ https://openweathermap.org/
 
 **After, running the code you can see a proper GUI as shown below. (I set Dharan as a default place.)**
 
-<img width="1440" alt="First" src="https://github.com/ashminarai/weatherforecast-application/assets/85731866/b7bcfe4a-7faa-4a23-9922-4cf3debbc747">
+<img width="1440" alt="First" src="https://github.com/ashminarai/weatherforecast-application/assets/85731866/5927450b-5ee6-41f2-9e50-6b17975621af">
 
 **Now, you can search any location as you prefer**
 
