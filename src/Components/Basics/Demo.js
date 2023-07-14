@@ -8,10 +8,10 @@ const Demo = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      // const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
-      // const response = await fetch(url);
-      // const resJson = await response.json();
-      // setCity(resJson.main);
+      const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      const response = await fetch(url);
+      const resJson = await response.json();
+      setCity(resJson.main);
     };
     fetchApi();
   }, [search]);
@@ -30,7 +30,7 @@ const Demo = () => {
 
         {/* using terminatory operator */}
 
-        {/* {!city ? (
+         {!city ? (
           <p>No Data Found</p>
         ) : ( 
           <div>
@@ -52,7 +52,7 @@ const Demo = () => {
             <div className="wave -two"></div>
             <div className="wave -three"></div>
           </div>
-         )}  */}
+         )}  
           <div className="wave -one"></div> 
             <div className="wave -two"></div>
             <div className="wave -three"></div>
