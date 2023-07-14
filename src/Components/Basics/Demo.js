@@ -8,8 +8,7 @@ const Demo = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=b14425a6554d189a2d7dc18a8e7d7263`
-      // const url = `http://api.openweatherapp.org/data/2.5/weather?q=${search})_units=metric_appid=b14425a6554d189a2d7dc18a8e7d7263`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b24c8c43ed28e5c42d4dd1e05e03db39`
       const response = await fetch(url);
       const resJson = await response.json();
       setCity(resJson.main);
@@ -49,9 +48,9 @@ const Demo = () => {
               </h3>
             </div>
 
-            <div className="wave -one"></div> 
+            {/* <div className="wave -one"></div> 
             <div className="wave -two"></div>
-            <div className="wave -three"></div>
+            <div className="wave -three"></div> */}
           </div>
          )}  
           <div className="wave -one"></div> 
