@@ -8,7 +8,7 @@ const Demo = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      // note: The api after appid may differ according to your gmail and verification
+      // note: The api after appid may differ according to your gmail and verification and here I have deleted my appid to push to github as this key is sensitive.
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b24c;
       // const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b24c8c43ed28e5c42d4dd1e05e03db39`;
       const response = await fetch(url);
