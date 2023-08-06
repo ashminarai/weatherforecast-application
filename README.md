@@ -1,7 +1,5 @@
 **🚀 Simple weather forecast app using reactJs (Note: This application only showcase the temperature of places.) 🚀**
 
-(Note: I have changed the api key that I used in the code because it was sensitive.)
-
 **1. Requirements**
 
 -ReactJS
